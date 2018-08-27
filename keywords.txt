@@ -12,7 +12,7 @@ getCos	KEYWORD2
 #
 Biquad	KEYWORD1
 filter	KEYWORD2
-computeCoefficients KEYWORD2
+computeCoefficients	KEYWORD2
 samplePeriod	KEYWORD2
 print	KEYWORD2
 LOWPASS	LITERAL1
@@ -25,7 +25,7 @@ filter	KEYWORD2
 samplePeriod	KEYWORD2
 setFrequency	KEYWORD2
 setQ	KEYWORD2
-getBP	KEYPWRD2
+getBP	KEYWORD2
 getLP	KEYWORD2
 getHP	KEYWORD2
 getBR	KEYWORD2
