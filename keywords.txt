@@ -12,7 +12,7 @@ getCos	KEYWORD2
 #
 Biquad	KEYWORD1
 filter	KEYWORD2
-computeCoefficients KEYWORD2
+computeCoefficients	KEYWORD2
 samplePeriod	KEYWORD2
 print	KEYWORD2
 LOWPASS	LITERAL1
