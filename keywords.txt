@@ -1,54 +1,54 @@
 FirstOrderFilter	KEYWORD1
-filter	KEYWORD2
-samplePeriod	KEYWORD2
-filterType	KEYWORD2
+filter			KEYWORD2
+samplePeriod		KEYWORD2
+filterType		KEYWORD2
 #
-Oscillator	KEYWORD1
-iterate	KEYWORD2
-setAmp	KEYWORD2
-setFreq	KEYWORD2
-getSin	KEYWORD2
-getCos	KEYWORD2
+Oscillator		KEYWORD1
+iterate			KEYWORD2
+setAmp			KEYWORD2
+setFreq			KEYWORD2
+getSin			KEYWORD2
+getCos			KEYWORD2
 #
-Biquad	KEYWORD1
-filter	KEYWORD2
+Biquad			KEYWORD1
+filter			KEYWORD2
 computeCoefficients KEYWORD2
-samplePeriod	KEYWORD2
-print	KEYWORD2
-LOWPASS	LITERAL1
-HIGHPASS	LITERAL1
-BANDPASS	LITERAL1
-NOTCH	LITERAL1
+samplePeriod		KEYWORD2
+print			KEYWORD2
+LOWPASS			LITERAL1
+HIGHPASS		LITERAL1
+BANDPASS		LITERAL1
+NOTCH			LITERAL1
 #
 StateVariableFilter	KEYWORD1
-filter	KEYWORD2
-samplePeriod	KEYWORD2
-setFrequency	KEYWORD2
-setQ	KEYWORD2
-getBP	KEYPWRD2
-getLP	KEYWORD2
-getHP	KEYWORD2
-getBR	KEYWORD2
+filter			KEYWORD2
+samplePeriod		KEYWORD2
+setFrequency		KEYWORD2
+setQ			KEYWORD2
+getBP			KEYPWRD2
+getLP			KEYWORD2
+getHP			KEYWORD2
+getBR			KEYWORD2
 #
 Halfband	KEYWORD1
-filter	KEYWORD2
+filter		KEYWORD2
 #
-Hilbert	KEYWORD1
-filter	KEYWORD2
-getI	KEYWORD2
-getQ	KEYWORD2
+Hilbert		KEYWORD1
+filter		KEYWORD2
+getI		KEYWORD2
+getQ		KEYWORD2
 #
-Integrator	KEYWORD1
-integrate	KEYWORD2
-reset	KEYWORD2
+Integrator      KEYWORD1
+integrate       KEYWORD2
+reset           KEYWORD2
 #
 Differentiator	KEYWORD1
 differentiate	KEYWORD2
 #
 #
 Delayline	KEYWORD1
-shiftIn	KEYWORD2
-getTap	KEYWORD2
+shiftIn		KEYWORD2
+getTap		KEYWORD2
 #
 
 
