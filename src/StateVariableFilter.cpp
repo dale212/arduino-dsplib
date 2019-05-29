@@ -3,6 +3,7 @@
 //  
 //
 //  Created by Dale Heatherington on 2/8/16.
+// Minor bug fix 5-22-19
 //
 //
 /* State variable filter Arduino library code.  Lowpass, highpass, bandpass and band reject outputs are all available at the same time.  Do not set the frequency higher than 1/6 the sample rate.  It will be unstable.
@@ -73,16 +74,17 @@
 //---------------------------------------------------------------------
 /* Create an instance of a state variable filter
  Input parameters:
+    ft: filter type, LOWPASS,HIGHPASS,BANDPASS,NOTCH
     fs: sample rate frequency
     fc: cutoff frequency  (must not exceed 1/6 sample rate)
-    qq:  Filter Q
+    qq:  Filter Q, set to 0.7071 for high abd low pass modes
  
  */
 
 
 StateVariableFilter::StateVariableFilter(StateVariableFilter::filterType ft,double fs, double fc, double qq=0.7071)
 {
-    ff = 2*sin(PI*fc/fs);   //filter frequency tuning
+    ff = 2*sin((PI*fc)/fs);   //filter frequency tuning
     fq = 1.0/qq;
     
     F = TOFIX(ff,q);
@@ -127,7 +129,7 @@ void StateVariableFilter::setQ(double qq)
 
  int32_t StateVariableFilter::iterate(int32_t in)
 {
-    
+   
     LP = ((z1a*F)>>q) + z1b ;
     HP = in - ((Q*z1a)>>q)  - LP  ;
     BR = LP + HP;
@@ -135,11 +137,12 @@ void StateVariableFilter::setQ(double qq)
     z1a = BP  ;
     z1b = LP ;
     
+    
     switch(StateVariableFilter::type){
-        case LOWPASS:   return LP;
-        case HIGHPASS:  return HP;
-        case BANDPASS:  return BP;
-        case NOTCH:     return BR;
+        case LOWPASS:   return LP ;
+        case HIGHPASS:  return HP ;
+        case BANDPASS:  return (BP*Q) >> q;
+        case NOTCH:     return BR ;
         default:        return 0;
     }
     

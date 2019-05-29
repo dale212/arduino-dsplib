@@ -19,6 +19,7 @@ public:
     
 private:
     int32_t z1,z2,z3,z4,z5,z6;
+    int32_t const q = 14;
     
 };
 
